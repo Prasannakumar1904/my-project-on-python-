@@ -1,0 +1,77 @@
+sleeper_seats = 20
+semi_sleeper_seats = 20
+general_seats = 55
+
+print("Welcome to PRASANNA's Bus Travels")
+print("\nAvailable Boarding Areas:")
+print("1. Chennai")
+print("2. Bangalore")
+print("3. Hyderabad")
+print("4. Coimbatore")
+print("5. Palakkad")
+print("6. Kochi")
+print("7. Madurai")
+print("8. Trichy")
+
+area_choice = int(input("\nEnter your boarding area (1-8): "))
+
+if area_choice == 1:
+    area = "Chennai"
+elif area_choice == 2:
+    area = "Bangalore"
+elif area_choice == 3:
+    area = "Hyderabad"
+elif area_choice == 4:
+    area = "Coimbatore"
+elif area_choice == 5:
+    area = "Palakkad"
+elif area_choice == 6:
+    area = "Kochi"
+elif area_choice == 7:
+    area = "Madurai"
+elif area_choice == 8:
+    area = "Trichy"
+else:
+    print("Invalid boarding area...Try again with correct option.")
+    exit()
+
+print("\nAvailable Bus Seat Types:")
+print("1. Sleeper (20 seats)")
+print("2. Semi-Sleeper (20 seats)")
+print("3. General (55 seats)")
+
+choice = int(input("\nEnter your seat option (1-3): "))
+
+if choice == 1:
+    if sleeper_seats > 0:
+        sleeper_seats -= 1
+        print(f"\n Sleeper seat booked successfully from {area}!")
+        print("Remaining Sleeper seats:", sleeper_seats)
+    else:
+        print("\n Sorry, Sleeper seats are full!")
+
+elif choice == 2:
+    if semi_sleeper_seats > 0:
+        semi_sleeper_seats -= 1
+        print(f"\n semi-Sleeper seat booked successfully from {area}!")
+        print("Remaining Semi-Sleeper seats:", semi_sleeper_seats)
+    else:
+        print("\n Sorry, Semi-Sleeper seats are full!")
+
+elif choice == 3:
+    if general_seats > 0:
+        general_seats -= 1
+        print(f"\n General seat booked successfully from {area}!")
+        print("Remaining General seats:", general_seats)
+    else:
+        print("\n Sorry, General seats are full!")
+
+else:
+    print("\n Invalid seat option. Please select the number between 1-3.")
+exit()
+    
+print('''
+
+Thank you for booking our PRASANNA's bus travels''')
+print("If you have any help contact with our head- 95678 *****")
+print("Have a peaceful travel")

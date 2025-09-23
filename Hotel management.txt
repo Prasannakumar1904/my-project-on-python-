@@ -1,0 +1,79 @@
+single_rooms = 10
+double_rooms = 5
+suite_rooms = 3
+
+breakfast_meal = 10
+afternoon_meal = 10
+night_meal = 10
+
+print(" Welcome to GABRIEL's Hotel")
+print("Available Room Types:")
+print("1. Single Room")
+print("2. Double Room")
+print("3. Suite Room")
+
+choice = int(input("Enter your option (1-3): "))
+
+if choice == 1:
+    if single_rooms > 0:
+        print("Single Room booked successfully!")
+        single_rooms -= 1
+        print("Remaining Single Rooms:", single_rooms)
+    else:
+        print("Sorry, no Single Rooms available.")
+
+elif choice == 2:
+    if double_rooms > 0:
+        print("Double Room booked successfully!")
+        double_rooms -= 1
+        print("Remaining Double Rooms:", double_rooms)
+    else:
+        print("Sorry, no Double Rooms available.")
+
+elif choice == 3:
+    if suite_rooms > 0:
+        print("Suite Room booked successfully!")
+        suite_rooms -= 1
+        print("Remaining Suite Rooms:", suite_rooms)
+    else:
+        print("Sorry, no Suite Rooms available.")
+
+else:
+    print("Invalid choice... Please select 1, 2, or 3.")
+    exit()
+
+print("\n---- Food Menu ----")
+print("1. Breakfast Meal")
+print("2. Afternoon Meal")
+print("3. Night Meal")
+
+food_choice = int(input("Enter your food choice (1-3): "))
+
+if food_choice == 1:
+    if breakfast_meal > 0:
+        print("Breakfast meal ordered successfully!")
+        breakfast_meal -= 1
+        print("Remaining Breakfast Meals:", breakfast_meal)
+    else:
+        print("Sorry, Breakfast meal not available.")
+
+elif food_choice == 2:
+    if afternoon_meal > 0:
+        print("Afternoon meal ordered successfully!")
+        afternoon_meal -= 1
+        print("Remaining Afternoon Meals:", afternoon_meal)
+    else:
+        print("Sorry, Afternoon meal not available.")
+
+elif food_choice == 3:
+    if night_meal > 0:
+        print("Night meal ordered successfully!")
+        night_meal -= 1
+        print("Remaining Night Meals:", night_meal)
+    else:
+        print("Sorry, Night meal not available.")
+
+else:
+    print("Invalid choice... Please select 1, 2, or 3.")
+
+print("Thank you for your cooperation ")
